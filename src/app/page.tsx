@@ -10,7 +10,7 @@ export const metadata = createMetadata({
 
 const Page: NextPage = () => {
   return (
-    <main className="mx-auto flex max-w-2xl flex-col gap-16 py-12">
+    <main className="mx-auto flex max-w-2xl flex-col gap-16 px-4 py-12">
       <div className="flex flex-col gap-4 text-center">
         <h1 className="text-5xl font-bold">Upstash Rate Limiter test</h1>
         <h2 className="text-lg">

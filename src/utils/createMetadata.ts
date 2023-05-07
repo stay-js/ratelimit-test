@@ -36,7 +36,7 @@ export const createMetadata = ({
     title,
     description,
     locale: 'en-US',
-    siteName: 'Zétény Nagy',
+    siteName: 'Upstash Rate Limiter test',
     type: 'website',
   },
 
