@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Anchor: React.FC<{ children: React.ReactNode; href: string }> = ({ children, href }) => (
   <Link
-    className="bg-gradient-to-r from-zinc-200 to-zinc-600 bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-all duration-200 hover:bg-[length:100%_2px]"
+    className="bg-gradient-to-r from-zinc-200 to-zinc-600 bg-[length:0%_2px] bg-left-bottom bg-no-repeat font-bold transition-all duration-200 hover:bg-[length:100%_2px]"
     href={href}
     target="_blank"
     rel="noopener noreferrer"
