@@ -1,6 +1,6 @@
 # Upstash Rate Limiter test
 
-Upstash Rate Limiter test.
+Upstash Rate Limiter test, built with [t3-stack](https://create.t3.gg).
 
 ### Front-end:
 
