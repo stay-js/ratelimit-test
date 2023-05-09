@@ -45,8 +45,4 @@ export const createMetadata = ({
     title,
     description,
   },
-
-  icons: {
-    icon: '/favicon.ico',
-  },
 });

@@ -10,11 +10,12 @@ export const Request: React.FC = () => {
   const [latency, setLatency] = useState<number | null>(null);
 
   const { mutate, isLoading } = useMutation(
-    async () =>
-      fetch('/api/ratelimit').then(async (res) => {
+    async () => {
+      return fetch('/api/ratelimit').then(async (res) => {
         setStatus(res.status);
         setResponse(await res.json());
-      }),
+      });
+    },
     {
       onMutate: () => setStart(new Date()),
       onSettled: () => setLatency(new Date().getTime() - (start as Date).getTime()),
