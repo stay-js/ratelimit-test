@@ -19,6 +19,8 @@ export const createMetadata = ({
   title,
   description,
 
+  applicationName: 'Upstash Rate Limiter test',
+
   robots: {
     index: true,
     follow: true,
@@ -32,12 +34,12 @@ export const createMetadata = ({
   },
 
   openGraph: {
+    type: 'website',
     url: `https://ratelimit.znagy.hu${path}`,
     title,
     description,
-    locale: 'en-US',
     siteName: 'Upstash Rate Limiter test',
-    type: 'website',
+    locale: 'en-US',
   },
 
   twitter: {
