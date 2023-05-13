@@ -4,16 +4,16 @@ import { Footer } from '@components/Footer';
 
 import '@styles/globals.css';
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => {
+const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <html lang="en" className="antialiased">
-      <body className="overflow-x-hidden">
+      <body className="flex min-h-screen flex-col justify-between overflow-x-hidden">
         <Analytics />
 
-        <div className="flex min-h-screen flex-col justify-between">
-          <ReactQueryWrapper>{children}</ReactQueryWrapper>
+        <ReactQueryWrapper>
+          {children}
           <Footer />
-        </div>
+        </ReactQueryWrapper>
       </body>
     </html>
   );
