@@ -16,6 +16,8 @@ export const createMetadata = ({
 
   keywords: 'ratelimit, rate limit, rate-limit, upstash, redis, @upstash/ratelimit, @upstash/redis',
 
+  colorScheme: 'light',
+
   title,
   description,
 

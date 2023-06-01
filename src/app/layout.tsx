@@ -1,19 +1,19 @@
 import { Analytics } from '@vercel/analytics/react';
-import { ReactQueryWrapper } from '@components/ReactQueryWrapper';
-import { Footer } from '@components/Footer';
+import { ClientProviders } from './client-providers';
+import { Footer } from '~/components/footer';
 
-import '@styles/globals.css';
+import '~/styles/globals.css';
 
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <html lang="en" className="antialiased">
-      <body className="flex min-h-screen flex-col justify-between overflow-x-hidden">
-        <Analytics />
+      <body className="grid min-h-screen grid-cols-1 grid-rows-[1fr_auto]">
+        <ClientProviders>
+          <Analytics />
 
-        <ReactQueryWrapper>
           {children}
           <Footer />
-        </ReactQueryWrapper>
+        </ClientProviders>
       </body>
     </html>
   );

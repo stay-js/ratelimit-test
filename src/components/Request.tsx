@@ -1,7 +1,8 @@
 'use client';
 
-import { useMutation } from '@tanstack/react-query';
 import { useState } from 'react';
+import { useMutation } from '@tanstack/react-query';
+import { cn } from '~/utils/cn';
 
 export const Request: React.FC = () => {
   const [response, setResponse] = useState<unknown | null>(null);
@@ -18,13 +19,13 @@ export const Request: React.FC = () => {
     },
     {
       onMutate: () => setStart(new Date()),
-      onSettled: () => setLatency(new Date().getTime() - (start as Date).getTime()),
+      onSettled: () => start && setLatency(new Date().getTime() - start.getTime()),
     },
   );
 
   return (
     <div className="flex flex-col items-center gap-4">
-      <pre className={`${isLoading ? 'opacity-30' : ''} w-full rounded-lg border p-4`}>
+      <pre className={cn('w-full rounded-lg border p-4', isLoading && 'opacity-30')}>
         {JSON.stringify(
           { latency: latency ? `${latency}ms` : null, status, data: response },
           null,

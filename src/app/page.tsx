@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
-import { createMetadata } from '@utils/createMetadata';
-import { Request } from '@components/Request';
+import { createMetadata } from '~/utils/create-metadata';
+import { Request } from '~/components/request';
 
 export const metadata = createMetadata({
   path: '',
