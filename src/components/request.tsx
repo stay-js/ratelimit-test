@@ -5,7 +5,7 @@ import { useMutation } from '@tanstack/react-query';
 import { cn } from '~/utils/cn';
 
 export const Request: React.FC = () => {
-  const [response, setResponse] = useState<unknown | null>(null);
+  const [response, setResponse] = useState<unknown>(null);
   const [status, setStatus] = useState<number | null>(null);
   const [start, setStart] = useState<Date | null>(null);
   const [latency, setLatency] = useState<number | null>(null);
